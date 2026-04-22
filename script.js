@@ -9,7 +9,7 @@ function goBack() {
 
 const courseData = {
   math: ["Algebra Homework", "Geometry Worksheet"],
-  science: ["Lab Report", "Read Chapter 3"],
+  spanish: ["Intro", "Read Chapter 1"],
   history: ["Essay on WWII", "Timeline Project"]
 };
 
