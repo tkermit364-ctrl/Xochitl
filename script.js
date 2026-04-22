@@ -24,5 +24,13 @@ if (document.getElementById("course-title")) {
     const li = document.createElement("li");
     li.innerText = item;
     list.appendChild(li);
+
+    function goHome() {
+  window.location.href = "index.html";
+}
+
+function scrollToCourses() {
+  document.querySelector(".courses").scrollIntoView({
+    behavior: "smooth"
   });
 }
