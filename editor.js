@@ -153,4 +153,9 @@ function setupToolbar() {
 window.addEventListener("DOMContentLoaded", () => {
   attachDeleteButtons();
   setupToolbar();
+
+  createDeleteButton
+window.addEventListener("DOMContentLoaded", () => {
+  attachDeleteButtons();
+  setupToolbar();
 });
