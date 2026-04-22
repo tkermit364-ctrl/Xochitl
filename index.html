@@ -1,11 +1,49 @@
-<h1>My Courses</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<button onclick="goToCourse('math')">Math</button>
-<button onclick="goToCourse('science')">Science</button>
+  <div class="container">
 
-<script>
-function goToCourse(course) {
-  localStorage.setItem("course", course);
-  window.location.href = "course.html";
-}
-</script>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>My LMS</h2>
+      <ul>
+        <li>Dashboard</li>
+        <li>Courses</li>
+        <li>Calendar</li>
+        <li>Inbox</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h1>Dashboard</h1>
+
+      <div class="courses">
+        <div class="card" onclick="goToCourse('math')">
+          <h2>Math</h2>
+          <p>Algebra & Geometry</p>
+        </div>
+
+        <div class="card" onclick="goToCourse('science')">
+          <h2>Science</h2>
+          <p>Labs & Experiments</p>
+        </div>
+
+        <div class="card" onclick="goToCourse('history')">
+          <h2>History</h2>
+          <p>World History</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
