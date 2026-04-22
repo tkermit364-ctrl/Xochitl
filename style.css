@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+.courses {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.card:hover {
+  background: #ddd;
+}
