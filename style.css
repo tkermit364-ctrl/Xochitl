@@ -84,3 +84,23 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.delete-page-btn {
+  margin-top: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+#toolbar button {
+  margin-right: 5px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.editor {
+  min-height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
