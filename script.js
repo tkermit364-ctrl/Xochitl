@@ -1,5 +1,5 @@
 function goToCourse(course) {
-  localStorage.setItem("currentCourse", course);
+  localStorage.setItem("course", course);
   window.location.href = "course.html";
 }
 
@@ -7,30 +7,38 @@ function goBack() {
   window.location.href = "index.html";
 }
 
-const courseData = {
-  math: ["Algebra Homework", "Geometry Worksheet"],
-  spanish: ["Intro", "Read Chapter 1"],
-  history: ["Essay on WWII", "Timeline Project"]
-};
-
-if (document.getElementById("course-title")) {
-  const course = localStorage.getItem("currentCourse");
-
-  document.getElementById("course-title").innerText = course;
-
-  const list = document.getElementById("assignments");
-
-  courseData[course].forEach(item => {
-    const li = document.createElement("li");
-    li.innerText = item;
-    list.appendChild(li);
-
-    function goHome() {
+function goHome() {
   window.location.href = "index.html";
 }
 
 function scrollToCourses() {
-  document.querySelector(".courses").scrollIntoView({
-    behavior: "smooth"
-  });
+  const el = document.querySelector(".courses");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+const data = {
+  math: ["Algebra HW", "Test Friday"],
+  spanish: ["Introduction to Spanish"],
+  history: ["Essay on WWII"]
+};
+
+// Run ONLY on course page
+if (document.getElementById("title")) {
+  const course = localStorage.getItem("course");
+
+  document.getElementById("title").innerText = course;
+
+  const list = document.getElementById("list");
+
+  if (data[course]) {
+    data[course].forEach(item => {
+      const li = document.createElement("li");
+      li.innerText = item;
+      list.appendChild(li);
+    });
+  } else {
+    list.innerHTML = "<li>No assignments found</li>";
+  }
 }
