@@ -75,4 +75,12 @@ h1 {
 }
 .card {
   border-left: 5px solid #3742fa;
+  
+}
+.editor {
+  background: white;
+  padding: 20px;
+  min-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
