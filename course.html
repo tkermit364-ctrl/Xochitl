@@ -1,19 +1,16 @@
-<h1 id="title"></h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course</title>
+</head>
+<body>
 
+<button onclick="goBack()">← Back</button>
+
+<h1 id="title"></h1>
 <ul id="list"></ul>
 
-<script>
-const data = {
-  math: ["Algebra HW", "Test Friday"],
-  spanish: ["Introduction To Spanish"]
-};
+<script src="script.js"></script>
 
-const course = localStorage.getItem("course");
-document.getElementById("title").innerText = course;
-
-data[course].forEach(item => {
-  const li = document.createElement("li");
-  li.innerText = item;
-  document.getElementById("list").appendChild(li);
-});
-</script>
+</body>
+</html>
